@@ -1,0 +1,20 @@
+﻿@model Sales_NET8.Web.Data.Entities.Category
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Apagar</h1>
+
+<h3>Tem a certeza que quer apagar?</h3>
+<div>
+    <partial name="_CategoryDetails" />
+
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Apagar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-success">Voltar</a>
+    </form>
+</div>
+
